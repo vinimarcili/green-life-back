@@ -1,0 +1,31 @@
+{
+  "name": "api-green-life",
+  "version": "1.0.0",
+  "description": "API de métricas socio ambietais",
+  "main": "index.js",
+  "repository": "https://github.com/vinimarcili/green-life-back.git",
+  "author": "Vinícius Marcili <vinipetter@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "standard"
+  },
+  "private": true,
+  "dependencies": {
+    "boom": "^7.2.0",
+    "dotenv": "^5.0.1",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.1.0",
+    "got": "^8.3.2",
+    "hapi": "^17.4.0",
+    "inert": "^5.1.0",
+    "joi": "^13.7.0",
+    "lout": "^11.0.1",
+    "mongodb": "^3.0.8",
+    "vision": "^5.4.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
