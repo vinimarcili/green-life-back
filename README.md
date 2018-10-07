@@ -24,7 +24,7 @@ Variavéis que devem ser definidas em um arquivo `.env` na raiz do projeto.
 CLIMATEMPO_API_URL -> URL da API do ClimaTempo (apiadvisor.climatempo.com.br)
 CLIMATEMPO_TOKEN -> Token gerado para o uso de API do ClimaTempo
 AIR_API_URL -> URL da API da Air Quality (https://aqicn.org/api/)
-AIR_TOKEN -> TOken gerado para o uso da API da Air Quality
+AIR_TOKEN -> Token gerado para o uso da API da Air Quality
 ```
 
 ## Rotas
@@ -34,7 +34,7 @@ AIR_TOKEN -> TOken gerado para o uso da API da Air Quality
 **GET** - /cities/{state}/{city?}
 
  - @param state (string) - Parametro obrigátorio com a sigla de um Estado.
- - @param city (string) - Parametro opcinal com o nome por exetenso de uma Cidade.
+ - @param city (string) - Parametro opcional com o nome por exetenso de uma Cidade.
 
 Response
 
@@ -209,7 +209,7 @@ Response
 }
 ```
 
-### Recupera a qualidade do ar de um fazendo uma busca atravez de uma palavra chave na API do Air Quality
+### Recupera a estação referencia para a obtenção do dado sobre a qualidade do ar fazendo uma busca atravez de uma palavra chave na API do Air Quality
 
 **GET** - /air/search/{keyword}
 
