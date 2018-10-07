@@ -1,6 +1,7 @@
-async function parseAirQuality (airObject) {
-  let result = {}
+function parseAirQuality (airObject) {
+  airObject.aqi = parseInt(airObject.aqi)
   
+  let result = {}
   if (airObject.aqi < 51) {
     result = {
       index: airObject.aqi,
@@ -46,7 +47,7 @@ async function parseAirQuality (airObject) {
       },
       color: 'purple'
     }
-  } else {
+  } else if (airObject.aqi > 300) {
     result = {
       index: airObject.aqi,
       class: {
@@ -54,6 +55,15 @@ async function parseAirQuality (airObject) {
         br: 'Perigoso'
       },
       color: 'black'
+    }
+  } else {
+    restult = {
+      index: -1,
+      class: {
+        en: '',
+        br: ''
+      },
+      color: 'white'
     }
   }
 

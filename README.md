@@ -127,39 +127,31 @@ Response
 
 ```js
 [
-   {
-      "uid":371,
-      "aqi":"109",
-      "time":{
-         "tz":"-03:00",
-         "stime":"2018-10-07 13:00:00",
-         "vtime":1538928000
-      },
-      "station":{
-         "name":"Santos, São Paulo, Brazil",
-         "geo":[
-            -23.9628155,
-            -46.3202369
-         ],
-         "url":"brazil/sao-paulo/santos"
-      }
-   },
-   {
-      "uid":362,
-      "aqi":"74",
-      "time":{
-         "tz":"-03:00",
-         "stime":"2018-10-07 13:00:00",
-         "vtime":1538928000
-      },
-      "station":{
-         "name":"Pinheiros, São Paulo, Brazil",
-         "geo":[
-            -23.5630037,
-            -46.6864347
-         ],
-         "url":"brazil/sao-paulo/pinheiros"
-      }
-   }
+  {
+    "index":87,
+    "class":{
+        "en":"Moderate",
+        "br":"Moderado"
+    },
+    "color":"yellow",
+    "location":"Santana, São Paulo, Brazil",
+    "geo":{
+        "lat":-23.498181,
+        "lng":-46.6263306
+    }
+  },
+  {
+    "index":80,
+    "class":{
+        "en":"Moderate",
+        "br":"Moderado"
+    },
+    "color":"yellow",
+    "location":"Jundiaí, São Paulo, Brazil",
+    "geo":{
+        "lat":-23.6527809,
+        "lng":-46.7123885
+    }
+  }
 ]
 ```

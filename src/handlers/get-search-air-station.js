@@ -1,4 +1,5 @@
 const got = require('got')
+const { parseAirQuality } = require('../utils/parse-air-quality.util')
 const {
   AIR_API_URL,
   AIR_TOKEN
@@ -11,7 +12,17 @@ async function handler (request, h) {
     const { body } = await got(`${AIR_API_URL}/search/?token=${AIR_TOKEN}&keyword=${keyword}`)
     const parsed = JSON.parse(body)
     
-    return h.response(parsed.data).code(200)
+    const result = await parsed.data.map((obj) => {
+      let parsedObject = parseAirQuality(obj)
+      parsedObject.location = obj.station.name
+      parsedObject.geo = {
+          lat: obj.station.geo[0],
+          lng: obj.station.geo[1]
+        }
+      return parsedObject
+    })
+
+    return h.response(result).code(200)
   } catch (err) {
     console.error(err)
     return h.response(err).code(500)
