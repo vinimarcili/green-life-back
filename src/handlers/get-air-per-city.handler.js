@@ -1,4 +1,5 @@
 const got = require('got')
+const { parseAirQuality } = require('../utils/parse-air-quality.util')
 const {
   AIR_API_URL,
   AIR_TOKEN
@@ -10,8 +11,8 @@ async function handler (request, h) {
   try {
     const { body } = await got(`${AIR_API_URL}/feed/${city}/?token=${AIR_TOKEN}`)
     const parsed = JSON.parse(body)
-    
-    return h.response(parsed.data).code(200)
+    const result = await parseAirQuality(parsed.data)
+    return h.response(result).code(200)
   } catch (err) {
     console.error(err)
     return h.response(err).code(500)

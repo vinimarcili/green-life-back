@@ -88,58 +88,12 @@ Response
 
 ```js
 {
-   "aqi":68,
-   "idx":359,
-   "attributions":[
-      {
-         "url":"http://www.cetesb.sp.gov.br/",
-         "name":"CETESB - Companhia Ambiental do Estado de São Paulo"
-      },
-      {
-         "url":"https://waqi.info/",
-         "name":"World Air Quality Index Project"
-      }
-   ],
-   "city":{
-      "geo":[
-         -23.5406338,
-         -46.6320967
-      ],
-      "name":"Parque D.Pedro II, São Paulo, Brazil",
-      "url":"https://aqicn.org/city/brazil/sao-paulo/parque-d.pedro-ii"
-   },
-   "dominentpol":"pm25",
-   "iaqi":{
-      "co":{
-         "v":2.8
-      },
-      "no2":{
-         "v":10.1
-      },
-      "o3":{
-         "v":19.9
-      },
-      "pm10":{
-         "v":23
-      },
-      "pm25":{
-         "v":68
-      },
-      "so2":{
-         "v":0.6
-      },
-      "t":{
-         "v":17.6
-      }
-   },
-   "time":{
-      "s":"2018-10-07 13:00:00",
-      "tz":"-03:00",
-      "v":1538917200
-   },
-   "debug":{
-      "sync":"2018-10-08T01:19:09+09:00"
-   }
+  index:109,
+  class: {
+    en: "Not bad", 
+    br:"Pouco ruim"
+  },
+  color:"orange"
 }
 ```
 
@@ -154,58 +108,12 @@ Response
 
 ```js
 {
-   "aqi":65,
-   "idx":342,
-   "attributions":[
-      {
-         "url":"http://www.cetesb.sp.gov.br/",
-         "name":"CETESB - Companhia Ambiental do Estado de São Paulo"
-      },
-      {
-         "url":"https://waqi.info/",
-         "name":"World Air Quality Index Project"
-      }
-   ],
-   "city":{
-      "geo":[
-         -23.6818396,
-         -46.620967
-      ],
-      "name":"Diadema, São Paulo, Brazil",
-      "url":"https://aqicn.org/city/brazil/sao-paulo/diadema"
-   },
-   "dominentpol":"pm25",
-   "iaqi":{
-      "co":{
-         "v":5.5
-      },
-      "no2":{
-         "v":11
-      },
-      "o3":{
-         "v":20.8
-      },
-      "pm10":{
-         "v":24
-      },
-      "pm25":{
-         "v":65
-      },
-      "so2":{
-         "v":1.1
-      },
-      "t":{
-         "v":17.6
-      }
-   },
-   "time":{
-      "s":"2018-10-07 13:00:00",
-      "tz":"-03:00",
-      "v":1538917200
-   },
-   "debug":{
-      "sync":"2018-10-08T01:15:44+09:00"
-   }
+  index:109,
+  class: {
+    en: "Not bad", 
+    br:"Pouco ruim"
+  },
+  color:"orange"
 }
 ```
 
