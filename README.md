@@ -1,4 +1,4 @@
-# Grenn Life API
+# Green Life API
 
 ## Sobre
 
