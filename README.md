@@ -142,3 +142,116 @@ Response
    }
 }
 ```
+
+### Recupera a qualidade do ar de uma cordenada geografica especifica atravez da API do Air Quality
+
+**GET** - /air/geo/{lat}/{lng}
+
+ - @param lat (float) - Latitude
+ - @param lng (float) - Longetude
+
+Response
+
+```js
+{
+   "aqi":65,
+   "idx":342,
+   "attributions":[
+      {
+         "url":"http://www.cetesb.sp.gov.br/",
+         "name":"CETESB - Companhia Ambiental do Estado de São Paulo"
+      },
+      {
+         "url":"https://waqi.info/",
+         "name":"World Air Quality Index Project"
+      }
+   ],
+   "city":{
+      "geo":[
+         -23.6818396,
+         -46.620967
+      ],
+      "name":"Diadema, São Paulo, Brazil",
+      "url":"https://aqicn.org/city/brazil/sao-paulo/diadema"
+   },
+   "dominentpol":"pm25",
+   "iaqi":{
+      "co":{
+         "v":5.5
+      },
+      "no2":{
+         "v":11
+      },
+      "o3":{
+         "v":20.8
+      },
+      "pm10":{
+         "v":24
+      },
+      "pm25":{
+         "v":65
+      },
+      "so2":{
+         "v":1.1
+      },
+      "t":{
+         "v":17.6
+      }
+   },
+   "time":{
+      "s":"2018-10-07 13:00:00",
+      "tz":"-03:00",
+      "v":1538917200
+   },
+   "debug":{
+      "sync":"2018-10-08T01:15:44+09:00"
+   }
+}
+```
+
+### Recupera a qualidade do ar de um fazendo uma busca atravez de uma palavra chave na API do Air Quality
+
+**GET** - /air/search/{keyword}
+
+ - @param keyword (string) - Uma palavra qualquer que será buscada na API.
+
+Response
+
+```js
+[
+   {
+      "uid":371,
+      "aqi":"109",
+      "time":{
+         "tz":"-03:00",
+         "stime":"2018-10-07 13:00:00",
+         "vtime":1538928000
+      },
+      "station":{
+         "name":"Santos, São Paulo, Brazil",
+         "geo":[
+            -23.9628155,
+            -46.3202369
+         ],
+         "url":"brazil/sao-paulo/santos"
+      }
+   },
+   {
+      "uid":362,
+      "aqi":"74",
+      "time":{
+         "tz":"-03:00",
+         "stime":"2018-10-07 13:00:00",
+         "vtime":1538928000
+      },
+      "station":{
+         "name":"Pinheiros, São Paulo, Brazil",
+         "geo":[
+            -23.5630037,
+            -46.6864347
+         ],
+         "url":"brazil/sao-paulo/pinheiros"
+      }
+   }
+]
+```
