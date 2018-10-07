@@ -1,0 +1,6 @@
+0 - 50 -> Bom
+51 - 100 -> Moderado
+101 - 150 -> Pouco saudável para grupos sensíveis
+151 - 200 -> Pouco saudável
+201 - 300 -> Muito prejudicial à saúde
+300+ -> Perigoso
