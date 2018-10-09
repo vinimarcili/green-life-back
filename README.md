@@ -82,7 +82,7 @@ Response
 
 **GET** - /air/{city?}
 
- - @param city (string) - Parametro opcinal com o nome por sem acentuação de uma cidade. Se deixado em branco a API ira retornar pela localização do IP. da requisição.
+ - @param city (string) - Parametro opcinal com o nome por sem acentuação de uma cidade. Se deixado em branco a API ira retornar pela localização do IP da requisição.
 
 Response
 
