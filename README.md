@@ -30,7 +30,7 @@ DADOSBR_API_URL -> URL da API de Dados do Ministério da Educação (http://educ
 
 ## Rotas
 
-### Recupa os nomes e IDS de cidades pela API do Ministério da Educação
+### Recupa os nomes de cidades de um estado pela API do Ministério da Educação
 
 **GET** - /cities/name/{state}
 
@@ -40,8 +40,8 @@ Response
 
 ```js
 [
-  "3500105:ADAMANTINA",
-  "3500204:ADOLFO"
+  "ADAMANTINA",
+  "ADOLFO"
 ]
 ```
 

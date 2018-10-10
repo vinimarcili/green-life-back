@@ -9,7 +9,10 @@ async function handler (request, h) {
   try {
     const { body } = await got(`${DADOSBR_API_URL}/cidades/${state}`)
     const parsed = JSON.parse(body)
-    return h.response(parsed).code(200)
+    const response = parsed.map((item) => {
+      return item.split(':')[1] || false
+    })
+    return h.response(response).code(200)
   } catch (err) {
     console.error(err)
     return h.response(err).code(500)
