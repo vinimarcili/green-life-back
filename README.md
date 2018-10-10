@@ -40,8 +40,8 @@ Response
 
 ```js
 [
-  "ADAMANTINA",
-  "ADOLFO"
+  "Adamantina",
+  "Adolfo"
 ]
 ```
 
