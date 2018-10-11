@@ -5,7 +5,7 @@ const {
   CLIMATEMPO_TOKEN
 } = process.env
 
-async function handler (request, h) { 
+async function handler (request, h) {
   try {
     const cityObject = await getCitiesIds(request.params.state, request.params.city)
     let parsed = {}

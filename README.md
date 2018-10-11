@@ -25,7 +25,6 @@ CLIMATEMPO_API_URL -> URL da API do ClimaTempo (apiadvisor.climatempo.com.br)
 CLIMATEMPO_TOKEN -> Token gerado para o uso de API do ClimaTempo
 AIR_API_URL -> URL da API da Air Quality (https://aqicn.org/api/)
 AIR_TOKEN -> Token gerado para o uso da API da Air Quality
-DADOSBR_API_URL -> URL da API de Dados do Ministério da Educação (http://educacao.dadosabertosbr.com/api)
 ```
 
 ## Rotas

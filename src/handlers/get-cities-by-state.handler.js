@@ -1,17 +1,12 @@
-const got = require('got')
-const { capitalizeFirstLetter } = require('../utils/parse-strings.util')
-const {
-  DADOSBR_API_URL
-} = process.env
+const { getCitiesIds } = require('../commands/get-cities-ids.command')
 
 async function handler (request, h) {
   const state = request.params.state
 
   try {
-    const { body } = await got(`${DADOSBR_API_URL}/cidades/${state}`)
-    const parsed = JSON.parse(body)
-    const response = parsed.map((item) => {
-      return capitalizeFirstLetter(item.split(':')[1]) || false
+    const cities = await getCitiesIds(state)
+    const response = cities.map((item) => {
+      return item.name
     })
     return h.response(response).code(200)
   } catch (err) {
