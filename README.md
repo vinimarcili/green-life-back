@@ -25,6 +25,7 @@ CLIMATEMPO_API_URL -> URL da API do ClimaTempo (http://apiadvisor.climatempo.com
 CLIMATEMPO_TOKEN -> Token gerado para o uso de API do ClimaTempo
 AIR_API_URL -> URL da API da Air Quality (https://aqicn.org/api)
 AIR_TOKEN -> Token gerado para o uso da API da Air Quality
+OPEN_MAP_API -> URL da API Open Map (https://nominatim.openstreetmap.org)
 ```
 
 ## Rotas
@@ -95,8 +96,9 @@ Response
 
 ### Recupera a qualidade do ar de uma cidade especifica atravez da API do Air Quality
 
-**GET** - /air/{city?}
+**GET** - /air/{state}/{city?}
 
+ - @param state (string) - Parametro obrigátorio com a sigla de um Estado.
  - @param city (string) - Parametro opcinal com o nome por sem acentuação de uma cidade. Se deixado em branco a API ira retornar pela localização do IP da requisição.
 
 Response

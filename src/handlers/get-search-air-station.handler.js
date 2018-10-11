@@ -11,14 +11,14 @@ async function handler (request, h) {
   try {
     const { body } = await got(`${AIR_API_URL}/search/?token=${AIR_TOKEN}&keyword=${keyword}`)
     const parsed = JSON.parse(body)
-    
+
     const result = await parsed.data.map((obj) => {
       let parsedObject = parseAirQuality(obj)
       parsedObject.location = obj.station.name
       parsedObject.geo = {
-          lat: obj.station.geo[0],
-          lng: obj.station.geo[1]
-        }
+        lat: obj.station.geo[0],
+        lng: obj.station.geo[1]
+      }
       return parsedObject
     })
 

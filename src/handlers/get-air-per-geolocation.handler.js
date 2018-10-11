@@ -1,18 +1,13 @@
-const got = require('got')
 const { parseAirQuality } = require('../utils/parse-air-quality.util')
-const {
-  AIR_API_URL,
-  AIR_TOKEN
-} = process.env
+const { getAirByGeolocation } = require('../commands/get-air-by-geolocation.command')
 
 async function handler (request, h) {
   const lat = parseFloat(request.params.lat) || 0
   const lng = parseFloat(request.params.lng) || 0
 
   try {
-    const { body } = await got(`${AIR_API_URL}/feed/geo:${lat};${lng}/?token=${AIR_TOKEN}`)
-    const parsed = JSON.parse(body)
-    const result = await parseAirQuality(parsed.data)
+    const data = await getAirByGeolocation(lat, lng)
+    const result = await parseAirQuality(data)
     return h.response(result).code(200)
   } catch (err) {
     console.error(err)

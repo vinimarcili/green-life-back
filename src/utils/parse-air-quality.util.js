@@ -1,6 +1,6 @@
 function parseAirQuality (airObject) {
   airObject.aqi = parseInt(airObject.aqi)
-  
+
   let result = {}
   if (airObject.aqi < 51) {
     result = {
@@ -57,7 +57,7 @@ function parseAirQuality (airObject) {
       color: 'black'
     }
   } else {
-    restult = {
+    result = {
       index: -1,
       class: {
         en: '',
