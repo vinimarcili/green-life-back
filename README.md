@@ -21,9 +21,9 @@ API que agrega requisições de informações socio ambientais.
 Variavéis que devem ser definidas em um arquivo `.env` na raiz do projeto.
 
 ```
-CLIMATEMPO_API_URL -> URL da API do ClimaTempo (apiadvisor.climatempo.com.br)
+CLIMATEMPO_API_URL -> URL da API do ClimaTempo (http://apiadvisor.climatempo.com.br/api)
 CLIMATEMPO_TOKEN -> Token gerado para o uso de API do ClimaTempo
-AIR_API_URL -> URL da API da Air Quality (https://aqicn.org/api/)
+AIR_API_URL -> URL da API da Air Quality (https://aqicn.org/api)
 AIR_TOKEN -> Token gerado para o uso da API da Air Quality
 ```
 

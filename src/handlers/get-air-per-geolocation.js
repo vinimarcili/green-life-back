@@ -6,8 +6,8 @@ const {
 } = process.env
 
 async function handler (request, h) {
-  const lat = request.params.lat || 0
-  const lng = request.params.lng || 0
+  const lat = parseFloat(request.params.lat) || 0
+  const lng = parseFloat(request.params.lng) || 0
 
   try {
     const { body } = await got(`${AIR_API_URL}/feed/geo:${lat};${lng}/?token=${AIR_TOKEN}`)
