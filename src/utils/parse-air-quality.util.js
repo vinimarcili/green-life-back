@@ -2,6 +2,7 @@ function parseAirQuality (airObject) {
   airObject.aqi = parseInt(airObject.aqi)
 
   let result = {}
+  console.log(airObject)
   if (airObject.aqi < 51) {
     result = {
       index: airObject.aqi,
@@ -9,7 +10,8 @@ function parseAirQuality (airObject) {
         en: 'Good',
         br: 'Bom'
       },
-      color: 'green'
+      color: 'green',
+      station: airObject.attributions[0].name
     }
   } else if (airObject.aqi < 101) {
     result = {
@@ -18,7 +20,8 @@ function parseAirQuality (airObject) {
         en: 'Moderate',
         br: 'Moderado'
       },
-      color: 'yellow'
+      color: 'yellow',
+      station: airObject.attributions[0].name
     }
   } else if (airObject.aqi < 151) {
     result = {
@@ -27,7 +30,8 @@ function parseAirQuality (airObject) {
         en: 'Not bad',
         br: 'Pouco ruim'
       },
-      color: 'orange'
+      color: 'orange',
+      station: airObject.attributions[0].name
     }
   } else if (airObject.aqi < 201) {
     result = {
@@ -45,7 +49,8 @@ function parseAirQuality (airObject) {
         en: 'Too bad',
         br: 'Muito ruim'
       },
-      color: 'purple'
+      color: 'purple',
+      station: airObject.attributions[0].name
     }
   } else if (airObject.aqi > 300) {
     result = {
@@ -54,7 +59,8 @@ function parseAirQuality (airObject) {
         en: 'Hazardous',
         br: 'Perigoso'
       },
-      color: 'black'
+      color: 'black',
+      station: airObject.attributions[0].name
     }
   } else {
     result = {
@@ -63,7 +69,8 @@ function parseAirQuality (airObject) {
         en: '',
         br: ''
       },
-      color: 'white'
+      color: 'white',
+      station: ''
     }
   }
 
