@@ -6,7 +6,7 @@ const {
 } = process.env
 
 async function handler (request, h) {
-  const city = request.params.city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') || 'here'
+  const city = request.params.city || 'here'
   try {
     const { body } = await got(`${AIR_API_URL}/feed/${city}/?token=${AIR_TOKEN}`)
     const parsed = JSON.parse(body)
