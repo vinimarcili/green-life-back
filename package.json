@@ -23,6 +23,7 @@
     "joi": "^13.7.0",
     "lout": "^11.0.1",
     "mongodb": "^3.0.8",
+    "npm": "^6.4.1",
     "vision": "^5.4.0"
   },
   "devDependencies": {

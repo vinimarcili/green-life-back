@@ -2,7 +2,6 @@ function parseAirQuality (airObject) {
   airObject.aqi = parseInt(airObject.aqi)
 
   let result = {}
-  console.log(airObject)
   if (airObject.aqi < 51) {
     result = {
       index: airObject.aqi,

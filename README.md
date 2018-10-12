@@ -67,10 +67,38 @@ Response
 
 ### Recupera a temperatura atual de uma cidade pela API do ClimaTempo
 
-**GET** - /temperature/{state}/{city}
+**GET** - /weather/{state}/{city}
 
  - @param state (string) - Parametro obrigátorio com a sigla de um Estado.
  - @param city (string) - Parametro obrigátorio com o nome por exetenso de uma Cidade.
+
+Response
+
+```js
+  {
+    id: 3477,
+    name: "São Paulo",
+    state: "SP",
+    country: "BR", 
+    data: {
+      temperature: 19,
+      wind_direction: "ENE",
+      wind_velocity: 9, 
+      humidity: 94,
+      condition: "Céu encoberto",
+      pressure: 1020,
+      icon:"3", 
+      sensation:19,
+      date:"2018-10-07 12:53:14"
+     }
+   }
+```
+### Recupera a temperatura atual de uma geolocalizacão pela API do ClimaTempo
+
+**GET** - /weather/geo/{lat}/{lng}
+
+ - @param lat (float) - Latitude
+ - @param lng (float) - Longetude
 
 Response
 
