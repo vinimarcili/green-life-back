@@ -138,7 +138,13 @@ Response
     en: "Not bad", 
     br:"Pouco ruim"
   },
-  color:"orange"
+  color:"orange",
+  station: 'Nome da estaçao',
+  locate: 'Cidade, Estado, Pais',
+  geo: {
+    lat: 23.123,
+    lng: -1.213
+  }
 }
 ```
 
@@ -158,7 +164,13 @@ Response
     en: "Not bad", 
     br:"Pouco ruim"
   },
-  color:"orange"
+  color:"orange",
+  station: 'Nome da estaçao',
+  locate: 'Cidade, Estado, Pais',
+  geo: {
+    lat: 23.123,
+    lng: -1.213
+  }
 }
 ```
 
@@ -179,6 +191,7 @@ Response
         "br":"Moderado"
     },
     "color":"yellow",
+    "station": 'Nome da estaçao',
     "location":"Santana, São Paulo, Brazil",
     "geo":{
         "lat":-23.498181,
@@ -192,6 +205,7 @@ Response
         "br":"Moderado"
     },
     "color":"yellow",
+    "station": 'Nome da estaçao',
     "location":"Jundiaí, São Paulo, Brazil",
     "geo":{
         "lat":-23.6527809,
