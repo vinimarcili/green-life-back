@@ -5,5 +5,10 @@ function handler (request, h) {
 module.exports = {
   method: 'GET',
   path: '/status',
-  handler
+  handler,
+  options: {
+    cors: {
+      origin: ['*']
+    }
+  }
 }

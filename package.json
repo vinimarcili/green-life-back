@@ -1,6 +1,6 @@
 {
   "name": "api-green-life",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API de métricas socio ambietais",
   "main": "index.js",
   "repository": "https://github.com/vinimarcili/green-life-back.git",
