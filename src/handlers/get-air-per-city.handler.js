@@ -16,7 +16,7 @@ async function handler (request, h) {
     const parsed = JSON.parse(body)
     let result = await parseAirQuality(parsed.data)
     if (result.index === -1) {
-      const locationSeach = await seachMaps(`${city},${state}`)
+      const locationSeach = await seachMaps(`search?q=${city},${state}`)
       const geolocation = await pickGeolocation(locationSeach)
       const newData = await getAirByGeolocation(geolocation[0].lat, geolocation[0].lng)
       result = await parseAirQuality(newData)

@@ -1,5 +1,6 @@
 function handler (request, h) {
-  return { code: 200, status: 'Up and Running' }
+  const result = { code: 200, status: 'Up and Running' }
+  return h.response(result).code(200)
 }
 
 module.exports = {

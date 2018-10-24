@@ -2,7 +2,6 @@ function parseAirQuality (airObject) {
   airObject.aqi = parseInt(airObject.aqi)
 
   let result = {}
-  console.log(airObject)
   if (airObject.aqi < 51) {
     result = {
       index: airObject.aqi,
@@ -11,7 +10,12 @@ function parseAirQuality (airObject) {
         br: 'Bom'
       },
       color: 'green',
-      station: airObject.attributions[0].name
+      station: airObject.attributions[0].name,
+      locate: airObject.city.name,
+      geo: {
+        lat: airObject.city.geo[0],
+        lng: airObject.city.geo[1]
+      }
     }
   } else if (airObject.aqi < 101) {
     result = {
@@ -21,7 +25,12 @@ function parseAirQuality (airObject) {
         br: 'Moderado'
       },
       color: 'yellow',
-      station: airObject.attributions[0].name
+      station: airObject.attributions[0].name,
+      locate: airObject.city.name,
+      geo: {
+        lat: airObject.city.geo[0],
+        lng: airObject.city.geo[1]
+      }
     }
   } else if (airObject.aqi < 151) {
     result = {
@@ -31,7 +40,12 @@ function parseAirQuality (airObject) {
         br: 'Pouco ruim'
       },
       color: 'orange',
-      station: airObject.attributions[0].name
+      station: airObject.attributions[0].name,
+      locate: airObject.city.name,
+      geo: {
+        lat: airObject.city.geo[0],
+        lng: airObject.city.geo[1]
+      }
     }
   } else if (airObject.aqi < 201) {
     result = {
@@ -40,7 +54,13 @@ function parseAirQuality (airObject) {
         en: 'Bad',
         br: 'Ruim'
       },
-      color: 'red'
+      color: 'red',
+      station: airObject.attributions[0].name,
+      locate: airObject.city.name,
+      geo: {
+        lat: airObject.city.geo[0],
+        lng: airObject.city.geo[1]
+      }
     }
   } else if (airObject.aqi < 301) {
     result = {
@@ -50,7 +70,12 @@ function parseAirQuality (airObject) {
         br: 'Muito ruim'
       },
       color: 'purple',
-      station: airObject.attributions[0].name
+      station: airObject.attributions[0].name,
+      locate: airObject.city.name,
+      geo: {
+        lat: airObject.city.geo[0],
+        lng: airObject.city.geo[1]
+      }
     }
   } else if (airObject.aqi > 300) {
     result = {
@@ -60,7 +85,12 @@ function parseAirQuality (airObject) {
         br: 'Perigoso'
       },
       color: 'black',
-      station: airObject.attributions[0].name
+      station: airObject.attributions[0].name,
+      locate: airObject.city.name,
+      geo: {
+        lat: airObject.city.geo[0],
+        lng: airObject.city.geo[1]
+      }
     }
   } else {
     result = {
@@ -70,7 +100,12 @@ function parseAirQuality (airObject) {
         br: ''
       },
       color: 'white',
-      station: ''
+      station: '',
+      locate: '',
+      geo: {
+        lat: 0.00,
+        lng: 0.00
+      }
     }
   }
 

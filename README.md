@@ -4,6 +4,12 @@
 
 API que agrega requisições de informações socio ambientais.
 
+## URL
+
+
+- [https://green-life-api.herokuapp.com](https://green-life-api.herokuapp.com)
+
+
 # Instalação
 
 ## Dependências
@@ -67,10 +73,38 @@ Response
 
 ### Recupera a temperatura atual de uma cidade pela API do ClimaTempo
 
-**GET** - /temperature/{state}/{city}
+**GET** - /weather/{state}/{city}
 
  - @param state (string) - Parametro obrigátorio com a sigla de um Estado.
  - @param city (string) - Parametro obrigátorio com o nome por exetenso de uma Cidade.
+
+Response
+
+```js
+  {
+    id: 3477,
+    name: "São Paulo",
+    state: "SP",
+    country: "BR", 
+    data: {
+      temperature: 19,
+      wind_direction: "ENE",
+      wind_velocity: 9, 
+      humidity: 94,
+      condition: "Céu encoberto",
+      pressure: 1020,
+      icon:"3", 
+      sensation:19,
+      date:"2018-10-07 12:53:14"
+     }
+   }
+```
+### Recupera a temperatura atual de uma geolocalizacão pela API do ClimaTempo
+
+**GET** - /weather/geo/{lat}/{lng}
+
+ - @param lat (float) - Latitude
+ - @param lng (float) - Longetude
 
 Response
 
@@ -110,7 +144,13 @@ Response
     en: "Not bad", 
     br:"Pouco ruim"
   },
-  color:"orange"
+  color:"orange",
+  station: 'Nome da estaçao',
+  locate: 'Cidade, Estado, Pais',
+  geo: {
+    lat: 23.123,
+    lng: -1.213
+  }
 }
 ```
 
@@ -130,7 +170,13 @@ Response
     en: "Not bad", 
     br:"Pouco ruim"
   },
-  color:"orange"
+  color:"orange",
+  station: 'Nome da estaçao',
+  locate: 'Cidade, Estado, Pais',
+  geo: {
+    lat: 23.123,
+    lng: -1.213
+  }
 }
 ```
 
@@ -151,6 +197,7 @@ Response
         "br":"Moderado"
     },
     "color":"yellow",
+    "station": 'Nome da estaçao',
     "location":"Santana, São Paulo, Brazil",
     "geo":{
         "lat":-23.498181,
@@ -164,6 +211,7 @@ Response
         "br":"Moderado"
     },
     "color":"yellow",
+    "station": 'Nome da estaçao',
     "location":"Jundiaí, São Paulo, Brazil",
     "geo":{
         "lat":-23.6527809,

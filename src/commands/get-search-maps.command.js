@@ -5,7 +5,7 @@ const {
 
 async function seachMaps (query) {
   try {
-    const { body } = await got(`${OPEN_MAP_API}/search?q=${encodeURI(query)}&format=json`)
+    const { body } = await got(`${OPEN_MAP_API}/${encodeURI(query)}&format=json`)
     return JSON.parse(body)
   } catch (err) {
     console.error(err)

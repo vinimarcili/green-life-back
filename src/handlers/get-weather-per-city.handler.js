@@ -1,5 +1,5 @@
-const got = require('got')
 const { getCitiesIds } = require('../commands/get-cities-ids.command')
+const { getWeatherById } = require('../commands/get-weather-by-id.command')
 const {
   CLIMATEMPO_API_URL,
   CLIMATEMPO_TOKEN
@@ -8,23 +8,22 @@ const {
 async function handler (request, h) {
   try {
     const cityObject = await getCitiesIds(request.params.state, request.params.city)
-    let parsed = {}
+    let result = {}
 
     if (cityObject.length > 0) {
-      const { body } = await got(`${CLIMATEMPO_API_URL}/api/v1/weather/locale/${cityObject[0].id}/current?token=${CLIMATEMPO_TOKEN}`)
-      parsed = JSON.parse(body)
+      result = await getWeatherById(cityObject[0].id)
     }
 
-    return parsed
+    return h.response(result).code(200)
   } catch (err) {
     console.error(err)
-    return err
+    return h.response(err).code(500)
   }
 }
 
 module.exports = {
   method: 'GET',
-  path: '/temperature/{state}/{city}',
+  path: '/weather/{state}/{city}',
   handler,
   options: {
     cors: {
